@@ -1,6 +1,6 @@
 {
   imports = [
     ./default.nix
-    ./nix
+    ./nix/lsp.nix
   ];
 }
