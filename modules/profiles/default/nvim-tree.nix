@@ -1,5 +1,5 @@
 {
-  imports = [ ../../../keybinds/explorer.nix ];
+  imports = [ ../../keybinds/explorer.nix ];
   
   config = {
     plugins = {
