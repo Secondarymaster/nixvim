@@ -6,7 +6,7 @@
       lsp = {
         enable = true;
         servers = {
-          lua-ls = {
+          lua_ls = {
             enable = true;
             settings.Lua = {
               diagnostics.globals = ["vim"];
