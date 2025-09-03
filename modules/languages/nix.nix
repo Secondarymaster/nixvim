@@ -1,6 +1,7 @@
 {
   config = {
     plugins = {
+      # Extend existing LSP servers, don't replace them
       lsp.servers.nil_ls = {
         enable = true;
         settings.nil = {
@@ -8,14 +9,15 @@
           nix.flake.autoArchive = true;
         };
       };
-      treesitter.settings.ensure_installed = ["nix"];
+      # Add nix to existing treesitter languages
+      treesitter.settings.ensure_installed = ["vim" "vimdoc" "lua" "nix"];
     };
     
     autoCmd = [
       {
         event = ["BufRead" "BufNewFile"];
         pattern = ["*.nix"];
-	callback = {
+        callback = {
           __raw = ''
             function()
               vim.opt_local.tabstop = 2
@@ -29,3 +31,4 @@
     ];
   };
 }
+
