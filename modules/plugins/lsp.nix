@@ -1,6 +1,4 @@
 {
-  imports = [ ../../keybinds/lsp.nix ];
-  
   config = {
     plugins = {
       lsp = {

@@ -1,8 +1,4 @@
 {
-  imports = [
-    ./keybinds/core.nix
-  ];
-  
   config = {
     globals.mapleader = " ";
     
@@ -24,26 +20,6 @@
       mouse = "a";
       undofile = true;
       updatetime = 250;
-    };
-    
-    plugins = {
-      treesitter = {
-        enable = true;
-        settings = {
-          highlight.enable = true;
-          indent.enable = true;
-          ensure_installed = ["vim" "vimdoc" "lua"];
-        };
-      };
-      nvim-autopairs.enable = true;
-      comment.enable = true;
-      which-key.enable = true;
-      lualine = {
-        enable = true;
-        settings.options.theme = "auto";
-      };
-
-      web-devicons.enable = true;
     };
   };
 }
