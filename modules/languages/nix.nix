@@ -15,14 +15,16 @@
       {
         event = ["BufRead" "BufNewFile"];
         pattern = ["*.nix"];
-        callback.__raw = ''
-          function()
-            vim.opt_local.tabstop = 2
-            vim.opt_local.shiftwidth = 2
-            vim.opt_local.expandtab = true
-            vim.opt_local.commentstring = "# %s"
-          end
-        '';
+	callback = {
+          __raw = ''
+            function()
+              vim.opt_local.tabstop = 2
+              vim.opt_local.shiftwidth = 2
+              vim.opt_local.expandtab = true
+              vim.opt_local.commentstring = "# %s"
+            end
+          '';
+        };
       }
     ];
   };
